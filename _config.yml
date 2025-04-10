@@ -1,0 +1,7 @@
+title: The Dolls Initiative
+description: A Radical System of Sophisticated Power for trans migrants in Europe
+theme: jekyll-theme-minimal
+baseurl: /thedolls
+url: https://maxxxcaram.github.io
+include: [".nojekyll"]
+exclude: ["SHARING.md", "deployment-guide.md", "github-pages-guide.md", "compartir-sitio.bat", "compartir-sitio.ps1"] 
