@@ -1,7 +1,7 @@
-title: The Dolls Initiative
-description: A Radical System of Sophisticated Power for trans migrants in Europe
+title: Miss Star International
+description: Miss Star International Website
 theme: jekyll-theme-minimal
-baseurl: /thedolls
+baseurl: /missstarweb2024
 url: https://maxxxcaram.github.io
 include: [".nojekyll"]
 exclude: ["SHARING.md", "deployment-guide.md", "github-pages-guide.md", "compartir-sitio.bat", "compartir-sitio.ps1"] 

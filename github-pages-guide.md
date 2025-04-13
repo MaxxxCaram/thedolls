@@ -1,4 +1,4 @@
-# Guía para Activar GitHub Pages en el Repositorio The Dolls Initiative
+# Guía para Activar GitHub Pages en el Repositorio Miss Star International
 
 Esta guía te mostrará cómo activar GitHub Pages para tu repositorio existente y hacer que tu sitio web sea accesible en línea.
 
@@ -6,7 +6,7 @@ Esta guía te mostrará cómo activar GitHub Pages para tu repositorio existente
 
 ### 1. Ve a la Configuración del Repositorio
 
-1. Abre tu navegador y ve a tu repositorio: https://github.com/MaxxxCaram/thedolls
+1. Abre tu navegador y ve a tu repositorio: https://github.com/MaxxxCaram/missstarweb2024
 2. Haz clic en la pestaña "Settings" (Configuración) en la parte superior del repositorio
 
 ### 2. Navega a la Sección Pages
@@ -25,7 +25,7 @@ Esta guía te mostrará cómo activar GitHub Pages para tu repositorio existente
 1. GitHub comenzará a construir y desplegar tu sitio
 2. Este proceso puede tardar unos minutos
 3. Una vez completado, verás un mensaje en la parte superior de la página indicando que tu sitio está publicado en una URL como:
-   `https://maxxxcaram.github.io/thedolls/`
+   `https://maxxxcaram.github.io/missstarweb2024/`
 
 ### 5. Verifica tu Sitio
 
