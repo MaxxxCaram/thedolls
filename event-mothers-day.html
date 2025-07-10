@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Mother's Day Special Initiative - The Dolls Initiative</title>
+    <link rel="stylesheet" href="css/normalize.css" />
+    <link rel="stylesheet" href="css/styles.css" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;600;700&family=Playfair+Display:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
+    <style>
+      .event-gallery {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+        gap: 12px;
+        margin: 2rem 0;
+      }
+      .event-gallery img {
+        width: 100%;
+        height: 120px;
+        object-fit: cover;
+        border-radius: 8px;
+      }
+      .event-description {
+        font-size: 1.2rem;
+        margin: 2rem 0;
+      }
+      .back-link {
+        margin: 2rem 0;
+        display: block;
+        color: var(--color-primary);
+        text-decoration: none;
+        font-weight: 600;
+      }
+      .back-link:hover {
+        color: var(--color-primary-dark);
+      }
+    </style>
+  </head>
+  <body>
+    <header class="header">
+      <div class="container">
+        <div class="header__logo">
+          <img src="assets/logo/logo.png" alt="The Dolls Initiative Logo" />
+          <div class="logo-glow"></div>
+        </div>
+        <nav class="nav">
+          <ul class="nav__menu">
+            <li><a href="index.html#about">About</a></li>
+            <li><a href="index.html#mission">Mission</a></li>
+            <li><a href="index.html#principles">Principles</a></li>
+            <li><a href="index.html#governance">Governance</a></li>
+            <li><a href="news-events.html" class="active">News & Events</a></li>
+            <li><a href="index.html#contact">Contact</a></li>
+            <li><a href="index.html#about-us">About Us</a></li>
+          </ul>
+        </nav>
+      </div>
+    </header>
+    <main>
+      <div class="container">
+        <a href="news-events.html" class="back-link">← Back to Events</a>
+        <h1>Mother's Day Special Initiative</h1>
+        <div class="event-description">
+          We celebrated Mother's Day with a special initiative, sharing stories
+          and resources for trans and migrant mothers in our network. Download
+          the full report and stories in PDF.
+        </div>
+        <h2>Gallery</h2>
+        <div class="event-gallery">
+          <img
+            src="assets/news/images/IMG-20240512-WA0001.jpg"
+            alt="Mother's Day"
+          />
+        </div>
+        <h2>Report</h2>
+        <a
+          href="assets/news/moths's day (1).pdf"
+          class="btn btn--primary"
+          target="_blank"
+          >Download Full Report (PDF)</a
+        >
+      </div>
+    </main>
+    <footer class="footer">
+      <div class="container">
+        <div class="footer__content">
+          <div class="footer__logo">
+            <img src="assets/logo/logo.png" alt="The Dolls Initiative Logo" />
+            <div class="logo-glow footer-glow"></div>
+          </div>
+          <div class="footer__links">
+            <h3>Navigation</h3>
+            <ul>
+              <li><a href="index.html#about">About</a></li>
+              <li><a href="index.html#mission">Mission</a></li>
+              <li><a href="index.html#principles">Principles</a></li>
+              <li><a href="index.html#governance">Governance</a></li>
+              <li><a href="index.html#contact">Contact</a></li>
+            </ul>
+          </div>
+          <div class="footer__contact">
+            <h3>Contact</h3>
+            <p>To contact The Dolls Initiative, please write to us at:</p>
+            <a href="mailto:info@thedolls.nl">info@thedolls.nl</a>
+          </div>
+          <div class="footer__social">
+            <h3>Follow Us</h3>
+            <div class="social-icons">
+              <a
+                href="https://www.instagram.com/the_dolls_initiative_ams_paris/"
+                target="_blank"
+                aria-label="Instagram"
+              >
+                <img src="assets/icons/instagram.svg" alt="Instagram" />
+              </a>
+              <a href="#" aria-label="Twitter">
+                <img src="assets/icons/twitter.svg" alt="Twitter" />
+              </a>
+              <a
+                href="https://www.facebook.com/Thedollsinitiative1/"
+                target="_blank"
+                aria-label="Facebook"
+              >
+                <img src="assets/icons/facebook.svg" alt="Facebook" />
+              </a>
+            </div>
+          </div>
+        </div>
+        <div class="footer__bottom">
+          <p>&copy; 2025 The Dolls Initiative. All rights reserved.</p>
+          <p>Built with love, trust, and sophisticated power.</p>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>
