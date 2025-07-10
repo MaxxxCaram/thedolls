@@ -1,0 +1,447 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>News & Events - The Dolls Initiative</title>
+    <meta
+      name="description"
+      content="Latest news, events, and updates from The Dolls Initiative - A Radical System of Sophisticated Power for trans migrants in Europe"
+    />
+    <link rel="stylesheet" href="css/normalize.css" />
+    <link rel="stylesheet" href="css/styles.css" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;600;700&family=Playfair+Display:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
+    <style>
+      /* News & Events specific styles */
+      .news-hero {
+        background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)),
+          #9c27b0;
+        padding: 4rem 0;
+        text-align: center;
+      }
+
+      .news-hero__title {
+        font-size: 3.5rem;
+        margin-bottom: 1rem;
+        color: #fff;
+      }
+
+      .news-hero__subtitle {
+        font-size: 1.5rem;
+        color: #e1bee7;
+        margin-bottom: 2rem;
+      }
+
+      .news-filters {
+        background: #f8f9fa;
+        padding: 2rem 0;
+        border-bottom: 1px solid #e9ecef;
+      }
+
+      .filter-buttons {
+        display: flex;
+        justify-content: center;
+        gap: 1rem;
+        flex-wrap: wrap;
+      }
+
+      .filter-btn {
+        padding: 0.75rem 1.5rem;
+        border: 2px solid var(--color-primary);
+        background: transparent;
+        color: var(--color-primary);
+        border-radius: 2rem;
+        cursor: pointer;
+        transition: all 0.3s ease;
+        font-weight: 600;
+      }
+
+      .filter-btn.active,
+      .filter-btn:hover {
+        background: var(--color-primary);
+        color: #fff;
+      }
+
+      .news-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+        gap: 2rem;
+        padding: 3rem 0;
+      }
+
+      .news-card {
+        background: #fff;
+        border-radius: 1rem;
+        overflow: hidden;
+        box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+        transition: transform 0.3s ease, box-shadow 0.3s ease;
+      }
+
+      .news-card:hover {
+        transform: translateY(-5px);
+        box-shadow: 0 8px 30px rgba(0, 0, 0, 0.15);
+      }
+
+      .news-card__image {
+        width: 100%;
+        height: 250px;
+        object-fit: cover;
+        background: linear-gradient(45deg, #9c27b0, #7b1fa2);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        color: #fff;
+        font-size: 1.2rem;
+      }
+
+      .news-card__content {
+        padding: 1.5rem;
+      }
+
+      .news-card__date {
+        color: var(--color-primary);
+        font-weight: 600;
+        font-size: 0.9rem;
+        margin-bottom: 0.5rem;
+      }
+
+      .news-card__title {
+        font-size: 1.4rem;
+        margin-bottom: 1rem;
+        color: var(--color-primary-dark);
+        line-height: 1.3;
+      }
+
+      .news-card__excerpt {
+        color: #666;
+        line-height: 1.6;
+        margin-bottom: 1.5rem;
+      }
+
+      .news-card__tags {
+        display: flex;
+        gap: 0.5rem;
+        flex-wrap: wrap;
+        margin-bottom: 1rem;
+      }
+
+      .news-tag {
+        background: #e1bee7;
+        color: var(--color-primary-dark);
+        padding: 0.25rem 0.75rem;
+        border-radius: 1rem;
+        font-size: 0.8rem;
+        font-weight: 600;
+      }
+
+      .news-card__media {
+        display: flex;
+        gap: 0.5rem;
+        margin-bottom: 1rem;
+      }
+
+      .media-indicator {
+        display: flex;
+        align-items: center;
+        gap: 0.25rem;
+        font-size: 0.8rem;
+        color: #666;
+      }
+
+      .media-indicator img {
+        width: 16px;
+        height: 16px;
+      }
+
+      .news-card__link {
+        display: inline-block;
+        color: var(--color-primary);
+        text-decoration: none;
+        font-weight: 600;
+        transition: color 0.3s ease;
+      }
+
+      .news-card__link:hover {
+        color: var(--color-primary-dark);
+      }
+
+      .event-highlight {
+        background: linear-gradient(135deg, #9c27b0, #7b1fa2);
+        color: #fff;
+        padding: 2rem;
+        border-radius: 1rem;
+        margin-bottom: 2rem;
+        text-align: center;
+      }
+
+      .event-highlight__title {
+        font-size: 2rem;
+        margin-bottom: 1rem;
+      }
+
+      .event-highlight__date {
+        font-size: 1.2rem;
+        margin-bottom: 1rem;
+        opacity: 0.9;
+      }
+
+      .event-highlight__description {
+        font-size: 1.1rem;
+        line-height: 1.6;
+        margin-bottom: 1.5rem;
+      }
+
+      .back-to-home {
+        text-align: center;
+        margin: 2rem 0;
+      }
+
+      .back-to-home a {
+        display: inline-flex;
+        align-items: center;
+        gap: 0.5rem;
+        color: var(--color-primary);
+        text-decoration: none;
+        font-weight: 600;
+        transition: color 0.3s ease;
+      }
+
+      .back-to-home a:hover {
+        color: var(--color-primary-dark);
+      }
+
+      .back-to-home img {
+        width: 20px;
+        height: 20px;
+        transform: rotate(180deg);
+      }
+
+      @media (max-width: 768px) {
+        .news-hero__title {
+          font-size: 2.5rem;
+        }
+
+        .news-grid {
+          grid-template-columns: 1fr;
+          gap: 1.5rem;
+        }
+
+        .filter-buttons {
+          gap: 0.5rem;
+        }
+
+        .filter-btn {
+          padding: 0.5rem 1rem;
+          font-size: 0.9rem;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <header class="header">
+      <div class="container">
+        <div class="header__logo">
+          <img src="assets/logo/logo.png" alt="The Dolls Initiative Logo" />
+          <div class="logo-glow"></div>
+        </div>
+        <nav class="nav">
+          <ul class="nav__menu">
+            <li><a href="index.html#about">About</a></li>
+            <li><a href="index.html#mission">Mission</a></li>
+            <li><a href="index.html#principles">Principles</a></li>
+            <li><a href="index.html#governance">Governance</a></li>
+            <li><a href="news-events.html" class="active">News & Events</a></li>
+            <li><a href="index.html#contact">Contact</a></li>
+            <li><a href="index.html#about-us">About Us</a></li>
+          </ul>
+          <button class="nav__toggle" aria-label="Toggle Menu">
+            <span class="nav__toggle-bar"></span>
+            <span class="nav__toggle-bar"></span>
+            <span class="nav__toggle-bar"></span>
+          </button>
+        </nav>
+      </div>
+    </header>
+
+    <main>
+      <section class="news-hero">
+        <div class="container">
+          <h1 class="news-hero__title">News & Events</h1>
+          <p class="news-hero__subtitle">
+            Stay connected with our latest initiatives, events, and community
+            updates
+          </p>
+        </div>
+      </section>
+
+      <section class="news-filters">
+        <div class="container">
+          <div class="filter-buttons">
+            <button class="filter-btn active" data-filter="all">All</button>
+            <button class="filter-btn" data-filter="events">Events</button>
+            <button class="filter-btn" data-filter="news">News</button>
+            <button class="filter-btn" data-filter="advocacy">Advocacy</button>
+            <button class="filter-btn" data-filter="community">
+              Community
+            </button>
+          </div>
+        </div>
+      </section>
+
+      <section class="section">
+        <div class="container">
+          <!-- Featured Event -->
+          <div class="event-highlight">
+            <h2 class="event-highlight__title">
+              Upcoming: Trans Rights Advocacy Summit
+            </h2>
+            <div class="event-highlight__date">
+              September 15-17, 2025 | Amsterdam
+            </div>
+            <p class="event-highlight__description">
+              Join us for three days of powerful discussions, workshops, and
+              networking focused on advancing trans migrant rights across
+              Europe. Featuring our directors and special guests from the
+              European Parliament.
+            </p>
+            <a href="#" class="btn btn--secondary">Register Now</a>
+          </div>
+
+          <div class="news-grid">
+            <!-- Amsterdam Dinner Event Card -->
+            <a
+              href="event-amsterdam-dinner.html"
+              class="news-card"
+              style="text-decoration: none; color: inherit"
+            >
+              <div class="news-card__image">
+                <img
+                  src="assets/events/images/hetAmsterdamdinner/ADF_Logo_RGB-01.png"
+                  alt="Het Amsterdam Dinner"
+                  style="width: 100%; height: 180px; object-fit: cover"
+                />
+              </div>
+              <div class="news-card__content">
+                <div class="news-card__date">2025</div>
+                <h3 class="news-card__title">Het Amsterdam Dinner</h3>
+              </div>
+            </a>
+            <!-- Mother's Day Event Card -->
+            <a
+              href="event-mothers-day.html"
+              class="news-card"
+              style="text-decoration: none; color: inherit"
+            >
+              <div class="news-card__image">
+                <img
+                  src="assets/events/images/Mothasday/IMG-20250710-WA0013.jpg"
+                  alt="Mother's Day"
+                  style="width: 100%; height: 180px; object-fit: cover"
+                />
+              </div>
+              <div class="news-card__content">
+                <div class="news-card__date">May 2025</div>
+                <h3 class="news-card__title">
+                  Mother's Day Special Initiative
+                </h3>
+              </div>
+            </a>
+          </div>
+
+          <div class="back-to-home">
+            <a href="index.html">
+              <img src="assets/icons/connection.svg" alt="Back" />
+              Back to Home
+            </a>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="footer">
+      <div class="container">
+        <div class="footer__content">
+          <div class="footer__logo">
+            <img src="assets/logo/logo.png" alt="The Dolls Initiative Logo" />
+            <div class="logo-glow footer-glow"></div>
+          </div>
+          <div class="footer__links">
+            <h3>Navigation</h3>
+            <ul>
+              <li><a href="index.html#about">About</a></li>
+              <li><a href="index.html#mission">Mission</a></li>
+              <li><a href="index.html#principles">Principles</a></li>
+              <li><a href="index.html#governance">Governance</a></li>
+              <li><a href="index.html#contact">Contact</a></li>
+            </ul>
+          </div>
+          <div class="footer__contact">
+            <h3>Contact</h3>
+            <p>To contact The Dolls Initiative, please write to us at:</p>
+            <a href="mailto:info@thedolls.nl">info@thedolls.nl</a>
+          </div>
+          <div class="footer__social">
+            <h3>Follow Us</h3>
+            <div class="social-icons">
+              <a
+                href="https://www.instagram.com/the_dolls_initiative_ams_paris/"
+                target="_blank"
+                aria-label="Instagram"
+              >
+                <img src="assets/icons/instagram.svg" alt="Instagram" />
+              </a>
+              <a href="#" aria-label="Twitter">
+                <img src="assets/icons/twitter.svg" alt="Twitter" />
+              </a>
+              <a
+                href="https://www.facebook.com/Thedollsinitiative1/"
+                target="_blank"
+                aria-label="Facebook"
+              >
+                <img src="assets/icons/facebook.svg" alt="Facebook" />
+              </a>
+            </div>
+          </div>
+        </div>
+        <div class="footer__bottom">
+          <p>&copy; 2025 The Dolls Initiative. All rights reserved.</p>
+          <p>Built with love, trust, and sophisticated power.</p>
+        </div>
+      </div>
+    </footer>
+
+    <script src="js/main.js"></script>
+    <script>
+      // Filter functionality
+      document.addEventListener("DOMContentLoaded", function () {
+        const filterButtons = document.querySelectorAll(".filter-btn");
+        const newsCards = document.querySelectorAll(".news-card");
+
+        filterButtons.forEach((button) => {
+          button.addEventListener("click", () => {
+            // Remove active class from all buttons
+            filterButtons.forEach((btn) => btn.classList.remove("active"));
+            // Add active class to clicked button
+            button.classList.add("active");
+
+            const filter = button.getAttribute("data-filter");
+
+            newsCards.forEach((card) => {
+              if (
+                filter === "all" ||
+                card.getAttribute("data-category") === filter
+              ) {
+                card.style.display = "block";
+              } else {
+                card.style.display = "none";
+              }
+            });
+          });
+        });
+      });
+    </script>
+  </body>
+</html>
