@@ -787,6 +787,34 @@ p {
   margin-bottom: 1.2rem;
 }
 
+/* Director Cards: media and motto extracted from inline */
+.director-motto {
+  font-size: 1.2rem;
+  color: var(--color-primary-dark);
+  margin-bottom: 0.7rem;
+  font-style: italic;
+}
+
+.director-media-title {
+  margin-top: 1.5rem;
+  margin-bottom: 0.7rem;
+  color: var(--color-primary-dark);
+  font-size: 1.3rem;
+}
+
+.director-media-list {
+  list-style: disc inside;
+  font-size: 1.2rem;
+  text-align: left;
+  margin: 0 auto 0 0;
+  padding-left: 1.2rem;
+}
+
+.director-media-link {
+  color: var(--color-secondary);
+  text-decoration: underline;
+}
+
 /* News & Projects Section */
 .section--news-projects {
   background: linear-gradient(
@@ -796,6 +824,113 @@ p {
   );
   padding-top: 7rem;
   padding-bottom: 7rem;
+}
+
+/* Innovative narrative block */
+.innovation-narrative {
+  text-align: center;
+  font-family: var(--font-display);
+  font-size: 1.7rem;
+  color: var(--color-primary-dark);
+  margin-bottom: 2rem;
+}
+
+.innovation-narrative-chip {
+  background: rgba(255, 255, 255, 0.7);
+  padding: 0.7rem 1.2rem;
+  border-radius: 2rem;
+  box-shadow: 0 2px 12px rgba(156, 39, 176, 0.1);
+  display: inline-block;
+}
+
+.innovation-accent {
+  color: #ff4081;
+}
+
+/* News & Events extracted from inline */
+.news-events-intro {
+  text-align: center;
+  margin-bottom: 2.5rem;
+  font-size: 1.7rem;
+  color: var(--color-primary-dark);
+  font-family: var(--font-display);
+}
+
+.news-social-icons {
+  display: flex;
+  justify-content: center;
+  gap: 2.2rem;
+  margin-bottom: 2.5rem;
+}
+
+.news-social-icons img {
+  width: 32px;
+  height: 32px;
+  filter: drop-shadow(0 2px 6px #e1bee7);
+  transition: transform 0.2s;
+}
+
+.news-events-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2rem;
+  justify-content: center;
+}
+
+.news-event-card {
+  display: block;
+  width: 320px;
+  background: #fff;
+  border-radius: 1rem;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+  text-decoration: none;
+  color: inherit;
+  overflow: hidden;
+  transition: box-shadow 0.2s;
+}
+
+.news-event-card__img {
+  width: 100%;
+  height: 180px;
+  object-fit: cover;
+}
+
+.news-event-card__body {
+  padding: 1.2rem;
+}
+
+.news-event-card__date {
+  font-size: 1.1rem;
+  color: var(--color-primary);
+  font-weight: 600;
+  margin-bottom: 0.5rem;
+}
+
+.news-event-card__title {
+  font-size: 1.3rem;
+  margin: 0 0 0.5rem 0;
+  color: var(--color-primary-dark);
+}
+
+.news-event-card__desc {
+  font-size: 1rem;
+  color: #555;
+  margin-bottom: 0.7rem;
+}
+
+.tag-chip {
+  display: inline-block;
+  background: #e1bee7;
+  color: var(--color-primary-dark);
+  padding: 0.2rem 0.8rem;
+  border-radius: 1rem;
+  font-size: 0.9rem;
+  font-weight: 600;
+}
+
+.news-events-cta {
+  text-align: center;
+  margin-top: 3rem;
 }
 
 .news-projects-list {
