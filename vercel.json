@@ -26,5 +26,8 @@
         }
       ]
     }
+  ],
+  "redirects": [
+    { "source": "/favicon.ico", "destination": "/assets/icons/favicon.ico", "permanent": true }
   ]
 } 
